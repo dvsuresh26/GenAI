@@ -12,3 +12,10 @@ bs4
 pypdf
 chromadb
 faiss-cpu
+arxiv
+wikipedia
+langchainhub
+groq
+beautifulsoup4
+langchain-groq
+cassio
