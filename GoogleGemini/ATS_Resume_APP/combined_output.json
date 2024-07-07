@@ -1,0 +1,14 @@
+[
+  {
+    "JD Match": "50%",
+    "Missing Keywords": "Bootstrap, Flux or Redux, Immutable.js, isomorphic React, modern front-end build pipelines and tools, AWS Cloud, HTML5 & CSS3 preprocessors (Less/SCSS)",
+    "Summary": "Michael Johnson's resume shows a strong match with the job description in terms of React.js, JavaScript, and RESTful APIs. However, there are several missing keywords and technologies mentioned in the job description that are not present in the resume. Overall, Michael's experience in web development and proficiency in Python and Django make him a suitable candidate for the position, but additional skills and experience in the missing keywords would enhance his candidacy.",
+    "candidate_name": "Micheal_Test.pdf"
+  },
+  {
+    "JD Match": "0%",
+    "Missing Keywords": "React.js, Bootstrap, DOM manipulation, JavaScript object model, Flux or Redux, Micro Service, REST/JSON, Component UI models, Immutable.js, isomorphic React, RESTful APIs, AWS Cloud, HTML5, CSS3, preprocessors (Less/SCSS)",
+    "Summary": "The candidate's resume does not match the job description requirements at all as the key skills and technologies required for the Software Developer position using React.js are missing. The candidate's strengths lie in data science, machine learning, and statistical analysis, which are not directly relevant to the job description. Overall, the candidate is not suitable for the Software Developer role based on the provided resume.",
+    "candidate_name": "Watson.pdf"
+  }
+]
