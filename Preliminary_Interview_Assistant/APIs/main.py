@@ -19,10 +19,10 @@ options_schema = ResponseSchema(
     name="options",
     description="""
         {
-            {'key':'1', 'value':''},
-            {'key':'2', 'value':''},
-            {'key':'3', 'value':''},
-            {'key':'4', 'value':''},
+            {'key':'a', 'value':'<option1>'},
+            {'key':'b', 'value':'<option2>'},
+            {'key':'c', 'value':'<option3>'},
+            {'key':'d', 'value':'<option4>'},
         }
     """
 )
@@ -54,6 +54,7 @@ app=FastAPI()
 class QuizRequest(BaseModel):
     num_questions:int
     topic:str
+    kind:str
 
 class Person(BaseModel):
     name:str
@@ -68,10 +69,11 @@ async def greetings(request:Person):
 async def generate_questions(request:QuizRequest):
     prompt=f"""
             Generate {{num_questions}} multiple-choice question with options and specify the correct answer.
-            These questions are for intermediate person. 
+            These questions are for {{kind}} knowledge person. 
             These questions are used for preliminary test.
             Question are for {{topic}}.
             Please return each question with the following format:
+            Strictly follows below format.
             {{format_instructions}}
             
             
@@ -82,7 +84,7 @@ async def generate_questions(request:QuizRequest):
     #         {format_instructions}
     # Format the prompt with input text
 
-    final_prompt=prompt_template.format_messages(format_instructions=format_instructions,num_questions=request.num_questions,topic=request.topic)
+    final_prompt=prompt_template.format_messages(format_instructions=format_instructions,num_questions=request.num_questions,topic=request.topic,kind=request.kind)
     # Get the response from the model
     response = llm(final_prompt)
     global questionss
